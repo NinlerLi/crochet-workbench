@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eaf5f5" />
+  <title>钩织工作台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="钩织工作台首页"><span class="brand-ball">🧶</span><strong>钩织<br>工作台</strong><span class="brand-sub">STITCH & DAYDREAM</span></a>
+      <nav id="navigation" aria-label="主导航">
+        <button class="nav-item active" data-page="tasks"><span class="nav-icon">▤</span><span>任务计划</span><span class="nav-arrow">›</span></button>
+        <button class="nav-item" data-page="calculator"><span class="nav-icon">＋</span><span>加减针计算</span><span class="nav-arrow">›</span></button>
+        <button class="nav-item" data-page="patterns"><span class="nav-icon">✿</span><span>花样参考</span><span class="nav-arrow">›</span></button>
+        <button class="nav-item" data-page="projects"><span class="nav-icon">▧</span><span>作品记录</span><span class="nav-arrow">›</span></button>
+        <button class="nav-item" data-page="yarn"><span class="nav-icon">◉</span><span>线材管理</span><span class="nav-arrow">›</span></button>
+        <button class="nav-item" data-page="export"><span class="nav-icon">⇧</span><span>数据导入 / 导出</span><span class="nav-arrow">›</span></button>
+      </nav>
+      <div class="sidebar-bottom"><div class="mini-note"><span>✦</span><p>一针一线，<br>都是慢慢来的喜欢。</p></div><span class="version">YOUR LITTLE CRAFT SPACE · 01</span></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="打开导航">☰</button><div class="breadcrumb"><span>钩织工作台</span><b>/</b><strong id="crumbCurrent">任务计划</strong></div><div class="top-actions"><span class="today" id="todayLabel"></span><button class="avatar" aria-label="个人资料">✿</button></div></header>
+      <div class="content" id="content"></div>
+      <footer class="footer"><span>MADE SLOWLY, WITH LOVE</span><span>🧶</span></footer>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
